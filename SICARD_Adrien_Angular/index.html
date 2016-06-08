@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Movie List</title>
+</head>
+<style>
+	img {
+		max-width: 200px;
+	}
+	body {
+		font-family: helvetica;
+	}
+</style>
+<body>
+
+	<div id="app">
+		<div class="movies">
+			<h1>Liste de mes Films</h1>
+
+			<!-- C'est ici que sera affichée notre liste de films -->
+			<ul class="movie-list"></ul>
+			<!-- Le formulaire d'entrée des films -->
+			<form action="#">
+					<input type="text" placeholder="Titre" class="movie-title" required>
+					<input type="text" placeholder="Poster URL" class="movie-poster" required>
+					<input type="text" placeholder="Genre" class="movie-genre" required>
+					<input type="int" placeholder="Note /10" class="movie-note" required>
+					<input type="submit" value="Ajouter">
+			</form>
+		</div>
+
+		<div class="stats">
+			<p>Je possède <span class="movie-total">0</span> films.</p>
+			<p>J'en ai vu <span class="movie-seen-total">0</span>.</p>
+			<p>Je n'en ai pas vu <span class="movie-unseen-total">0</span>.</p>
+			<p>Note moyenne <span class="mnote-total">0</span>.</p>
+		</div>
+	</div>
+
+	<!-- Librairies Backbone : JQuery, Underscore, Backbone -->
+	<!-- LIBS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+	<!-- /LIBS -->
+
+	<!-- Scripts de notre application -->
+		<script src="scripts/models/movie-model.js"></script>
+		<script src="scripts/collections/movie-collection.js"></script>
+		<script src="scripts/views/movie-list.js"></script>
+		<script src="scripts/app.js"></script>
+	<!-- Scripts de notre application -->
+</body>
+</html>
